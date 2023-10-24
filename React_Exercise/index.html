@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Add React and React DOM from a CDN -->
+  <script src="./react.dev.js"></script>
+  <script src="./react-dom.dev.js"></script>
+</head>
+<body>
+<p>React Quick Start</p>
+<div id="section"></div>
+<script>
+  // Define your JSX code
+  const data = (
+          <div>
+            <h1>Hello World</h1>
+            <p>Lets render this to the DOM</p>
+          </div>
+  );
+
+  // Render the JSX to the DOM
+  ReactDOM.render(data, document.getElementById("section"));
+</script>
+</body>
+</html>
