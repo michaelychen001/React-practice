@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <input id="input"></input>
+    <script>
+        var input = document.getElementById("input");
+
+        var state = {
+            value: ""
+        }
+
+        var setState = function(newState){
+            state = {
+                ...state,
+                ...newState
+            }
+            render()
+        }
+
+        var render = function() {
+            input.value = state.value
+        }
+
+        input.addEventListener('input', function(){
+            setState({
+                value: this.value
+            })
+        })
+
+    </script>
+</body>
+
+</html>

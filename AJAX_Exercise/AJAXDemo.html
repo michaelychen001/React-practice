@@ -15,16 +15,16 @@
             xhttp.open("GET", "https://gorest.co.in/public/v2/users/", true);
             xhttp.send();
         }
+
         function displayData(xhttp){
             jsonData = JSON.parse(xhttp.responseText);
             var newContent = "";
-            newContent += "<ul>"
             for (var obj of jsonData) {
                 newContent += "<li>" + obj.name + "</li>";
             }
-            newContent += "</ul>"
             document.getElementById("JsonShow").innerHTML = newContent;
         }
+
         function clearJSONData(){
             document.getElementById("JsonShow").innerHTML = "";
         }
